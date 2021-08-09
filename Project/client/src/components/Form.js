@@ -51,7 +51,7 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
                 {error && error.map((err, index) => <p key={index}>{err}</p>) }
 
 
-               <TextField id="outlined-basic" label={label1} value={name} variant="outlined"  onChange={e => setName(e.target.value)}/>
+               <TextField id="outlined-basic" label="lllllllllllllll" value={name} variant="outlined"  onChange={e => setName(e.target.value)}/>
                {/* <p>{nerror}</p> */}
                <TextField id="outlined-basic" label={label2}  value={code} variant="outlined"  onChange={e => setCode(e.target.value) }/>
                 {/* <p>{perror}</p> */}

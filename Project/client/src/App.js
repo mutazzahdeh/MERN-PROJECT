@@ -1,12 +1,18 @@
 
 import './App.css';
 import Form from './components/Form'
+import {Router} from '@reach/router'
+import Main from './views/Main'
 
 function App() {
   return (
     <>
-    <h1>hello</h1>
-    <Form />
+    
+   <Router>
+     
+     <Main path="/show"></Main>
+     
+   </Router>
     </>
 
 
