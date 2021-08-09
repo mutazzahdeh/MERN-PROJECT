@@ -5,7 +5,7 @@ const ProductSchema = new mongoose.Schema({
         type: String,
     },
 	code: {
-        type: Number
+        type: String
     } ,
     price: {
         type: Number
@@ -13,12 +13,12 @@ const ProductSchema = new mongoose.Schema({
     desc: {
         type: String
     } ,
-    // status: {
-    //     out of stock
-    // in stock
-    // } ,
-    // img: 
-    //     { data: Buffer, contentType: String },
+    status:{
+        
+    },
+    img: 
+        { data: Buffer, contentType: String },
+    
 
 },{ timestamps: true }) 
 
