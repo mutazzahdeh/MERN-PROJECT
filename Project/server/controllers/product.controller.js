@@ -23,9 +23,9 @@ module.exports.createProduct = (request, response) => {
 
 //------------------------------- Getting All products------------------------------
 module.exports.getAllProduct = (request, response) => {
-    Product.find({}).sort({ date: 1 })
-    .then( sortedProducts =>{ response.json(sortedProducts)})
-    .catch(err => response.json(err))
+    Product.findOne({_id:request.params.id})
+        .then(product => response.json(product))
+        .catch(err => response.json(err))
     }
 //-----------------------------------------------------------------------------------
 
