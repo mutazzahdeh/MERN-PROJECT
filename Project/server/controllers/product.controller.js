@@ -60,12 +60,12 @@ module.exports.deleteProduct = (request, response) => {
 
 //------------------------------- Creating news--- ---------------------------------
 module.exports.createNews = (request, response) => {
-    const { title, desc,data } = request.body;
+    const { title, desc,date } = request.body;
     console.log(request.body)
     News.create({
         title,
         desc,
-        data,
+        date,
     })
         .then(news => response.json(news))
         .catch(err => response.status(400).json(err));
