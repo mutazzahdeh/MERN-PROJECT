@@ -10,15 +10,15 @@ const ProductSchema = new mongoose.Schema({
     price: {
         type: Number
     } ,
-    dimension: {
-        type: Number
+    desc: {
+        type: String
     } ,
     // status: {
     //     out of stock
     // in stock
     // } ,
-    img: 
-        { data: Buffer, contentType: String },
+    // img: 
+    //     { data: Buffer, contentType: String },
 
 },{ timestamps: true }) 
 

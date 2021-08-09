@@ -1,4 +1,4 @@
-const { Product } = require('../models/product.model');
+const { Product } = require('../models/product.models');
 
 module.exports.index = (request, response) => {
     response.json({
@@ -8,12 +8,13 @@ module.exports.index = (request, response) => {
 
 //------------------------------- Creating a product ---------------------------------
 module.exports.createProduct = (request, response) => {
-    const { name, date,status } = request.body;
+    const { name, code,price,desc } = request.body;
     console.log(request.body)
     Product.create({
         name,
-        date,
-        status
+        code,
+        price,
+        desc,
     })
         .then(product => response.json(product))
         .catch(err => response.status(400).json(err));
