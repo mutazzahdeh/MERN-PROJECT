@@ -1,6 +1,6 @@
 
 import './App.css';
-import Heder from './component/Heder';
+import Heder from './components/Heder';
 import {Router} from '@reach/router'
 import Main from './views/Main'
 
