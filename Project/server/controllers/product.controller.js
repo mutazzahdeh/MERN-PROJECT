@@ -23,7 +23,7 @@ module.exports.createProduct = (request, response) => {
 
 //------------------------------- Getting All products------------------------------
 module.exports.getAllProduct = (request, response) => {
-    Product.findOne({_id:request.params.id})
+    Product.find({})
         .then(product => response.json(product))
         .catch(err => response.json(err))
     }
