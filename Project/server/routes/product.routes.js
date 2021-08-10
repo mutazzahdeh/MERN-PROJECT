@@ -6,7 +6,7 @@ module.exports = app => {
     app.put("/api/product/:id", ProductControllers.updateProduct);
     app.delete("/api/product/:id", ProductControllers.deleteProduct);
 
-    app.get("/api", ProductControllers.getAllNews);
+    app.get("/api/news", ProductControllers.getAllNews);
     app.post("/api/news/new", ProductControllers.createNews);
     app.get("/api/news/:id", ProductControllers.getNews);
     app.put("/api/news/:id", ProductControllers.updateNews);

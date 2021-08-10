@@ -61,15 +61,15 @@ module.exports.deleteProduct = (request, response) => {
 
 //------------------------------- Creating news--- ---------------------------------
 module.exports.createNews = (request, response) => {
-    const { title, desc,date } = request.body;
+    const { title, desc } = request.body;
     console.log(request.body)
     News.create({
         title,
         desc,
-        date,
+        
     })
-        .then(news => response.json(news))
-        .catch(err => response.status(400).json(err));
+        .then(news => {response.json(news);console.log("@@@@@@@@")})
+        .catch(err => {response.status(400).json(err);console.log("@@@@@@@@");});
 }
 //---------------------------------------------------------------------------------
 
