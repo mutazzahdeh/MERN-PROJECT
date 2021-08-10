@@ -4,18 +4,17 @@ import Heder from './components/Heder';
 import NewsForm from './components/NewsForm';
 import {Router} from '@reach/router'
 import Main from './views/Main'
+import NewsScroll from './components/NewsScroll';
+import NewsMain from './views/NewsMain';
 
 
 
 function App() {
   return (
-    <>
-    <NewsForm/>
-    <br></br>
-    <br></br>
+    <>    
+    <Router>
     
-   <Router>
-     
+    <NewsMain path="/news" />
      <Main path="/show"></Main>
      
    </Router>
