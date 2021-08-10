@@ -6,7 +6,9 @@ const Heder = () => {
         <div>
             
             <Card>
-        <CardHeader title={"zxxfdsfdsf"} />
+        <CardHeader dir={"rtl"} title={"جمعية النهضة النسوية"}>
+
+        </CardHeader>
         
       </Card>
         </div>

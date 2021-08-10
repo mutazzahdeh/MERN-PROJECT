@@ -8,14 +8,15 @@ module.exports.index = (request, response) => {
 
 //------------------------------- Creating a product ---------------------------------
 module.exports.createProduct = (request, response) => {
-    const { name, code,price,desc,img } = request.body;
+    const { name, code,price,desc,img,category } = request.body;
     console.log(request.body)
     Product.create({
         name,
         code,
         price,
         desc,
-        img
+        img,
+        category
     })
         .then(product => response.json(product))
         .catch(err => response.status(400).json(err));
