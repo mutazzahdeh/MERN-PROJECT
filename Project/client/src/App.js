@@ -4,6 +4,7 @@ import Heder from './components/Heder';
 import NewsForm from './components/NewsForm';
 import {Router} from '@reach/router'
 import Main from './views/Main'
+import Show from './views/Show'
 
 
 
@@ -17,6 +18,7 @@ function App() {
    <Router>
      
      <Main path="/show"></Main>
+     <Show path='/kalb'/>
      
    </Router>
     </>

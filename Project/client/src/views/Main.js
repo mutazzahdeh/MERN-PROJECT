@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import Form from '../components/Form'
+import Form from '../components/Form';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 
