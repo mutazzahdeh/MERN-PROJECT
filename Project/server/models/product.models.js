@@ -15,8 +15,7 @@ const ProductSchema = new mongoose.Schema({
     } ,
     status:{ 
         type : String,
-        default : "inStock"
-        
+        enum : ["inStock","outOfStock", "aponRequest"],
     },
     img: 
         { data: Buffer, contentType: String },
@@ -24,25 +23,10 @@ const ProductSchema = new mongoose.Schema({
     category : {
         type : String,
         enum : ["itemA","itemE", "itemC", "itemD","itemM", "itemB", "itemS"],
-       
     }
     
 
 },{ timestamps: true }) 
 
-const NewsSchema = new mongoose.Schema({
-	title:  {
-        type: String,
-    },
-	desc: {
-        type: String
-    } ,
-    date: {
-        type: Date
-    } 
-},{ timestamps: true }) 
-
-
 module.exports.Product = mongoose.model("Product", ProductSchema);
 
-module.exports.News = mongoose.model("News", NewsSchema);

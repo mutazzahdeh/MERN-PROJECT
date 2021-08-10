@@ -1,4 +1,4 @@
-const { Product , News} = require('../models/product.models');
+const { Product } = require('../models/product.models');
 
 module.exports.index = (request, response) => {
     response.json({
@@ -8,7 +8,7 @@ module.exports.index = (request, response) => {
 
 //------------------------------- Creating a product ---------------------------------
 module.exports.createProduct = (request, response) => {
-    const { name, code,price,desc,img,category } = request.body;
+    const { name, code,price,desc,img } = request.body;
     console.log(request.body)
     Product.create({
         name,
@@ -16,7 +16,8 @@ module.exports.createProduct = (request, response) => {
         price,
         desc,
         img,
-        category
+        category:"itemA",
+        status: "inStock"
     })
         .then(product => response.json(product))
         .catch(err => response.status(400).json(err));
@@ -55,6 +56,7 @@ module.exports.deleteProduct = (request, response) => {
         .catch(err => response.json(err))
 }
 //-----------------------------------------------------------------------------------
+<<<<<<< HEAD
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -105,3 +107,5 @@ module.exports.deleteNews = (request, response) => {
         .catch(err => response.json(err))
 }
 //-----------------------------------------------------------------------------------
+=======
+>>>>>>> 8d8ab7a1f0e2a93ae2fbfac9ac3fe22e12fe1169
