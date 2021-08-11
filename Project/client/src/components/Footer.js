@@ -10,7 +10,7 @@ const classes = useStyles();
 <div>
     <Card className={classes.root}>
     
-   
+
         <div className={classes.footer} >
         <div dir ="rtl" style={{textAlign:"center"}}>
                 <p >رقم الهاتف: 00972 2 2956853 </p>
