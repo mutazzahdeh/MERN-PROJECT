@@ -10,17 +10,17 @@ const NewsMain= () => {
         axios.get('http://localhost:8000/api/news')
             .then(  res=>{
                 setNews(res.data);
-               
+
                 setLoaded(true);
             });
 
-            
+
     },[])
 
     return(
         <div>
-     
-            {loaded && <NewsScroll news={news}  /> }
+
+            {loaded && <NewsScroll news={news} setNews={setNews} /> }
         </div>
     )
 }
