@@ -1,38 +1,29 @@
 /* eslint-disable no-use-before-define */
 import React ,{useState,useEffect} from 'react';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
+
+import Search from './Search.css'
 import axios from 'axios';
 
-const SearchComp= ()=> {
+const SearchComp= (props)=> {
+    const {products, setProducts , showProduct,setShowProd} = props;
+    
 
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/products')
-            .then(  res=>{
-                setProducts(res.data);
-            });
-            
-            
-    },[])
+    const searchProd =(value) =>{
+        console.log(value)
+        var pro=[]
+        pro=products.filter(products => products.name.includes(value))
+
+        setShowProd(pro)
+    }
 
 return (
-    <div style={{ width: 300 }}>
-        <Autocomplete
-        freeSolo
-        id="free-solo-2-demo"
-        disableClearable
-        options={products.map((option) => option.title)}
-        renderInput={(params) => (
-            <TextField
-            {...params}
-            label="Search input"
-            margin="normal"
-            variant="outlined"
-            InputProps={{ ...params.InputProps, type: 'search' }}
-        />
-        )}
-    />
+    <div style={{ width: 300 }} className="searchComp" >
+    <p>
+    <label className="searchComp" >Name</label><br />
+    <input type="text" name="search" placeholder="Search.."
+        onChange={(e) => { searchProd(e.target.value) }} />
+</p>
+
     </div>
     );
 }
