@@ -28,7 +28,7 @@ useEffect(() => {
                     <img src={info.img} alt={info.name}/>
                     <p >
                         
-                            {info.name}, {info.price} , 
+                            {info.name}, {info.price} , {info.category}
                         
                         </p>
                         

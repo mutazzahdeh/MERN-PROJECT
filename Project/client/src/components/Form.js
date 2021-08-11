@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Button, Card, TextField} from '@material-ui/core';
 
-
 const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , error , buttonValue}) => {
 
     const [name, setName] = useState("")
@@ -13,8 +12,7 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
     const [status, setStatus] = useState("") //"inStock" deafult
     // const [nerror, setNerror] = useState("")
     // const [perror, setPerror] = useState("")
-
-
+    const category1 =["puzzle" , "أثاث" , "العاب خشبية" , "طاولات" , "ألواح" , "زينة ميلاد"];
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -58,9 +56,20 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
                 <TextField id="outlined-basic" label={label3}  value={price} variant="outlined"  onChange={e => setPrice(e.target.value) }/>
                 <TextField id="outlined-basic" label={label4}  value={desc} variant="outlined"  onChange={e => setDesc(e.target.value) }/>
                 <TextField id="outlined-basic" label={label5}  value={img} variant="outlined"  onChange={e => setImg(e.target.value) }/>
-                <TextField id="outlined-basic" label={label6}  value={category} variant="outlined"  onChange={e => setCategory(e.target.value) }/>
-
-
+                {/* <TextField id="outlined-basic" label={label6}  value={category} variant="outlined"  onChange={e => setCategory(e.target.value) }/> */}
+                {/* <select value={category} id="outlined-basic" variant="outlined"  onChange={e => setCategory(e.target.value)}>
+                    <option>puzzle</option>
+                    <option>أثاث</option>
+                    <option>العاب خشبية</option>
+                    <option>طاولات</option>
+                    <option>ألواح</option>
+                    <option>زينة ميلاد</option>
+            </select> */}
+                <select value={category} id="outlined-basic" variant="outlined" onChange={e => setCategory(e.target.value)}>
+                    {category1.map((cat, idx) => (
+                        <option key={idx} value={cat}> {cat} </option>
+                    ))}
+                </select>
                <br></br>
                   
                     <Button variant="contained" color="primary" type="submit" >{buttonValue}</Button>

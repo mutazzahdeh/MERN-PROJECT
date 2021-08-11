@@ -23,7 +23,8 @@ const ProductSchema = new mongoose.Schema({
         
     category : {
         type : String,
-        enum : ["itemA","itemE", "itemC", "itemD","itemM", "itemB", "itemS"],
+        enum : ["puzzle","العاب خشبية", "أثاث", "طاولات","ألواح", "زينة ميلاد"],
+        
     }
     
 

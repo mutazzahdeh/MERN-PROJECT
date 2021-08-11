@@ -11,13 +11,12 @@ const Main = () => {
     const formFun = (task) => {
         axios.post("http://localhost:8000/api/product/new", task)
         .then(res=>{
+            console.log(res.data)
             setTask(res.data);
             navigate("/show")
     
     
     }) 
-    
-    
         .catch(err=>{
             console.log(err.response)
                 const errorResponse = err.response.data.errors; // Get the errors from err.response.data
