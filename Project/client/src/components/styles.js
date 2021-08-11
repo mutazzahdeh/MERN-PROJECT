@@ -1,19 +1,17 @@
 import { colors } from '@material-ui/core';
 import { red } from '@material-ui/core/colors';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withTheme } from '@material-ui/core/styles';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        background: 'linear-gradient(45deg, orange 30%, white 90%)',
-        width: "100 rem",
-        height: "100rem"
-    
+        backgroundImage: 'linear-gradient(45deg, #901414 30%, white 80%)',
+        
     },
     customizeToolbar: {
-        minHeight: 36,
-        backgroundColor: "grey",
+        // minHeight: 36,
+        backgroundColor: "silver",
     },
 
     menuButton: {
@@ -21,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     Link:{
-        textDecoration:"none",color:"white",
+        textDecoration:"none",color:"black",
         marginRight: theme.spacing(2)
     },
 
@@ -37,14 +35,13 @@ const useStyles = makeStyles((theme) => ({
         height : "100px",
 
     },
-
     header: {
         display:"flex",
         alignItems:"streatch",
         justifyContent : "flex-end",
         flexDirection: "row",
-        marginRight: "15px"
-       
+        marginRight: "15px",
+
     
     },
 
@@ -62,10 +59,12 @@ const useStyles = makeStyles((theme) => ({
     },
 
     footer: {
-        backgroundColor: "",
         width: "100%",
-        height: "1000px",
-        fontSize: "12px"
+        height: "100px",
+        fontSize: "12px",
+        backgroundColor: "#901414",
+        padding: "10px",
+        
     }
 }));
 export default useStyles;

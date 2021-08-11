@@ -1,8 +1,8 @@
-import {CardHeader,Card } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import AnimatedBg from "react-animated-bg";
 // import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
@@ -11,21 +11,28 @@ import { Link } from '@reach/router';
 
 
 import useStyles from './styles';
-import Wrapper from './Wrapper';
+const footerStyle = {
+  width: "100%",
+  height: "100px",
+  fontSize: "12px"
+}
+const Navbar = () => {
+    const classes = useStyles();
 
-
-
-const Heder = () => {
-
-
-
-const classes = useStyles();
-
+    
     return (
+    <AnimatedBg 
+    colors={["#901414", "white"]}
+    duration={0.5}
+      delay={4} // it will wait 4 seconds before next transition starts
+    timingFunction="ease-in-out"
+    className="section-styles"
+    > 
+    
 
-// the container
-<div >
-    <Card className={classes.root}>
+   
+    <div>
+    
     <div className={classes.header}>
         <div className = {classes.logo}>
         <h1 dir="rtl">جمعية النهضة النسائية</h1>
@@ -37,10 +44,8 @@ const classes = useStyles();
         </div>
         <p dir="rtl"> <Avatar dir="rtl" className = {classes.img}  alt="logo" src="../static/images/logo.png" /></p>
     </div>
-
-        <AppBar position="static">
-        <div className={classes.customizeToolbar} >
-            <Toolbar>
+        
+        <Toolbar>
                 {/* <Button color="inherit">ooll</Button> */}
                 
                 <Typography variant="h6" className={classes.title}>
@@ -60,17 +65,17 @@ const classes = useStyles();
                         منتجاتنا
                     </Link> 
                 </Typography>
-            </Toolbar>
-        </div>
-        </AppBar>
-        <hr/>
-        <footer className = {classes.footer}>
-        <Wrapper/>
-        </footer>
-    </Card>
-
+        </Toolbar>
     </div>
-    )
-}
+    
+        
 
-export default Heder
+        
+        
+    </AnimatedBg>
+);
+    }
+
+
+
+export default Navbar;

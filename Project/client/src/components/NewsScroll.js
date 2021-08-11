@@ -26,6 +26,7 @@ const NewsScroll = (props) => {
         <div className="marquee">
         <div className="marquee--inner">
         <span>
+        
 
         {news.map((news, idx)=>{return (
             <div className="orb">
