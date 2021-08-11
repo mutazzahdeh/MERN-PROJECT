@@ -8,7 +8,7 @@ module.exports.index = (request, response) => {
 
 //------------------------------- Creating a product ---------------------------------
 module.exports.createProduct = (request, response) => {
-    const { name, code,price,desc,img } = request.body;
+    const { name, code,price,desc,img , category , status} = request.body;
     console.log(request.body)
     Product.create({
         name,
@@ -16,7 +16,7 @@ module.exports.createProduct = (request, response) => {
         price,
         desc,
         img,
-        category:"itemA",
+        category,
         status: "inStock"
     })
         .then(product => response.json(product))

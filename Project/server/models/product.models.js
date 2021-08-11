@@ -18,11 +18,13 @@ const ProductSchema = new mongoose.Schema({
         enum : ["inStock","outOfStock", "aponRequest"],
     },
     img: 
-        { data: Buffer, contentType: String },
+        { type:String,
+        required: true },
         
     category : {
         type : String,
-        enum : ["itemA","itemE", "itemC", "itemD","itemM", "itemB", "itemS"],
+        enum : ["puzzle","العاب خشبية", "أثاث", "طاولات","ألواح", "زينة ميلاد"],
+        
     }
     
 
