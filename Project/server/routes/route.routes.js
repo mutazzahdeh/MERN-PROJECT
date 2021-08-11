@@ -8,7 +8,7 @@ module.exports = app => {
     app.put("/api/product/:id", ProductControllers.updateProduct);
     app.delete("/api/product/:id", ProductControllers.deleteProduct);
 
-    app.get("/api/allnews", NewsControllers.getAllNews);
+    app.get("/api/news", NewsControllers.getAllNews);
     app.post("/api/news/new", NewsControllers.createNews);
     app.get("/api/news/:id", NewsControllers.getNews);
     app.put("/api/news/:id", NewsControllers.updateNews);
