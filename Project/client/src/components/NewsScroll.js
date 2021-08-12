@@ -25,16 +25,17 @@ const NewsScroll = (props) => {
         <div style={style} dir="rtl">
         <div className="marquee">
         <div className="marquee--inner">
-        
+        {news.map((news, idx)=>{return (
+            <div className="orb">
+                <div className="bignews" key={idx}><Link to={"/news/" + news._id} > <b>News {formdate(news.createdAt)} </b></Link><br/> {news.title}</div><br />
+                <div key ={idx}>  {news.desc}</div>
+                </div>
+
+        )})}
                     <span>
             <br /> <br />
-                    {news.map((news, idx)=>{return (
-                        <div className="orb">
-                            <div className="bignews" key={idx}><Link to={"/news/" + news._id} > <b>News {formdate(news.createdAt)} </b></Link><br/> {news.title}</div><br />
-                            <div key ={idx}>  {news.desc}</div>
-                            </div>
-
-                    )})}
+                    
+                        
                     </span>
                 </div>
             </div>
