@@ -11,7 +11,7 @@ app.use(express.static(__dirname + "/../client/"));
 app.use(express.static(__dirname + "/../node_modules/"));
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: __dirname + "/../client" });
+  res.sendFile("index.html", { root: __dirname + "/../client/src/index.html" });
 });
 
 const addClient = socket => {

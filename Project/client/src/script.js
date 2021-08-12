@@ -1,4 +1,5 @@
 window.onload = function() {
+  const io = require("socket.io");
   const url = window.location.origin;
   let socket = io.connect(url);
   let prev = {};
