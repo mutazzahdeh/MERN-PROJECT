@@ -18,13 +18,11 @@ const Navbar = (props) => {
     const classes = useStyles();
     const {LinkTo}=props
 
+
+    
     
     return (
-    
-    
-    
 
-   
     <div>
     
     <div className={classes.header}>
