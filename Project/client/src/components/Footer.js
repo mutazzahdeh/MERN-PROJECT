@@ -8,7 +8,7 @@ const classes = useStyles();
     return (
 // the container
 <div>
-    <Card className={classes.root}>
+    <Card>
     
 
         <div className={classes.footer} >
