@@ -25,25 +25,7 @@ const NewsScroll = (props) => {
         <div style={style} dir="rtl">
         <div className="marquee">
         <div className="marquee--inner">
-        <span>
         
-
-        {news.map((news, idx)=>{return (
-            <div className="orb">
-                <td key={idx}>{news.title}</td> 
-                <td key ={idx}> {news.desc}</td>
-                </div>
-
-        )})}
-
-                        <div className="orb red"></div>
-                        <div className="orb yellow"></div>
-                        <div className="orb blue"></div>
-                        <div className="orb orange"></div>
-                        <div className="orb purple"></div>
-                        <div className="orb green"></div>
-                        <div className="orb"></div>
-                    </span>
                     <span>
             <br /> <br />
                     {news.map((news, idx)=>{return (
