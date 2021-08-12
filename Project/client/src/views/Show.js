@@ -1,6 +1,7 @@
 import React, {useState , useEffect} from 'react'
 import axios from 'axios'
 import { FilterBar } from '../components/FilterBar'
+import { Link } from '@reach/router'
 
 import SearchComp from '../components/SearchComp'
 
@@ -32,13 +33,13 @@ useEffect(() => {
         <FilterBar products={products} setProducts={setProducts} showProduct={infos} setShowproduct={setinfos} />
         
         <SearchComp  products={product} setProducts={setProduct}  showProduct={infos} setShowProd={setinfos}  />
-             {infos.map((info, idx) => {
+            {infos.map((info, idx) => {
                 return (
                     <div key={idx}>
                     <img src={info.img} alt={info.name}/>
                     <p >
                         
-                            {info.name}, {info.price} , {info.category}
+                        <Link to = {"/product/"+ info._id}> {info.name}, {info.price} , {info.category} </Link>
                         
                         </p>
                         

@@ -9,11 +9,8 @@ import useStyles from './components/styles';
 import Show from './views/Show';
 import NewsScroll from './components/NewsScroll';
 import {Aboutus} from "./views/Aboutus"
-
-
-
-
-
+import ProductDetails from './components/ProductDetails';
+import NewsDetails from './components/NewsDetails';
 
 
 
@@ -30,6 +27,8 @@ function App() {
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show path='/kalb'/>
+        <ProductDetails path = "/product/:id"/>
+        <NewsDetails path = "/news/:id"/>
       </Router>
       <Footer/>
   </div>
