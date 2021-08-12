@@ -1,5 +1,5 @@
   
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -47,8 +47,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function LoginForm(props){
+    let {label7, label8,formFunction , buttonValue}=props
+
   const classes = useStyles();
+
+const [email, setEmail] = useState("")
+const [password, setPassword] = useState("")
+
+const submitHandler = (e) => {
+    e.preventDefault();
+    formFunction({email, password});
+}
+
+
 
   return (
     <Container component="main" maxWidth="xs">
@@ -60,8 +72,10 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate onSubmit={submitHandler}>
           <TextField
+            onChange={e => setEmail(e.target.value)}
+            label = {label7}
             variant="outlined"
             margin="normal"
             required
@@ -73,6 +87,8 @@ export default function SignIn() {
             autoFocus
           />
           <TextField
+            onChange={e => setPassword(e.target.value)}
+            label ={label8}
             variant="outlined"
             margin="normal"
             required
@@ -94,9 +110,9 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            {buttonValue}
           </Button>
-          <Grid container>
+          {/* <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
                 Forgot password?
@@ -107,7 +123,7 @@ export default function SignIn() {
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
-          </Grid>
+          </Grid> */}
         </form>
       </div>
       <Box mt={8}>
@@ -115,4 +131,4 @@ export default function SignIn() {
       </Box>
     </Container>
   );
-}
+} 
