@@ -10,6 +10,7 @@ import NewsMain from './views/NewsMain';
 import {Aboutus} from "./views/Aboutus"
 import Navbar from './components/Navbar';
 import useStyles from './components/styles';
+import LoginForm from './components/LoginForm'
 
 import Show from './views/Show';
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show path='/kalb'/>
+        <LoginForm path='/login'></LoginForm>
       </Router>
       <Heder/>
   </div>

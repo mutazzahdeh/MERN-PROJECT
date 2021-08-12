@@ -2,7 +2,7 @@ import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import AnimatedBg from "react-animated-bg";
+//import AnimatedBg from "react-animated-bg";
 // import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
@@ -72,7 +72,7 @@ const Navbar = () => {
 
         
         
-    </AnimatedBg>
+     </AnimatedBg>
 );
     }
 
