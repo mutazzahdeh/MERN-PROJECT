@@ -1,6 +1,5 @@
 
 export const Aboutus = () => {
-
     return (
         <>
         <div dir="rtl" style={{overflowY: "scroll", height:""}}>
@@ -79,7 +78,10 @@ export const Aboutus = () => {
             <h3 dir="rtl">مصادر تمويل الجمعية </h3>
             <p>الجمعية كمؤسسة أهلية على التبرعات المحلية والخارجية لتدعيم وتطوير أنشطتها وخدماتها الإجتماعية والإنسانية والتربوية في المجتمع المحلي </p>
         </div>
+<<<<<<< HEAD
         <p>asdasd</p>
+=======
+>>>>>>> 005cb9d1c4370bbb787bb2f31916b4a13d03b62b
         </>
     )
 }
