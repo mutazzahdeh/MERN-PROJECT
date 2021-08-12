@@ -11,19 +11,14 @@ import { Link } from '@reach/router';
 import useStyles from './styles';
 
 
-
-
-
 const Navbar = () => {
     const classes = useStyles();
 
+
+    
     
     return (
-    
-    
-    
 
-   
     <div>
     
     <div className={classes.header}>

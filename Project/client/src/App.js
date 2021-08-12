@@ -8,16 +8,9 @@ import {Aboutus} from "./views/Aboutus"
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import useStyles from './components/styles';
-import LoginForm from './components/LoginForm'
+import Admin from './views/Admin'
 import Show from './views/Show';
 import NewsScroll from './components/NewsScroll';
-
-
-
-
-
-
-
 
 function App() {
   const classes = useStyles();
@@ -32,7 +25,7 @@ function App() {
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show path='/kalb'/>
-        <LoginForm path='/login'></LoginForm>
+        <Admin path='/login'></Admin>
       </Router>
       <Footer/>
   </div>
