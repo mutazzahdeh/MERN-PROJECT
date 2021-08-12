@@ -2,7 +2,7 @@
 export const Aboutus = () => {
     return (
         <>
-        <div dir="rtl" style={{margin:"10px"}}>
+        <div dir="rtl" style={{overflowY: "scroll", height:""}}>
             <h2 dir="rtl">جمعية النهضة النسائية </h2>
             <h3 dir="rtl">نشأة الجمعية :</h3>
             <p1 dir="rtl">
