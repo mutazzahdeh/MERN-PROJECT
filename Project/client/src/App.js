@@ -3,7 +3,6 @@ import {Router} from '@reach/router'
 import Main from './views/Main'
 
 import NewsMain from './views/NewsMain';
-import {Aboutus} from "./views/Aboutus"
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import useStyles from './components/styles';
@@ -13,6 +12,12 @@ import NewsScroll from './components/NewsScroll';
 import { AdminPage } from './views/AdminPage';
 import { User } from './views/User';
 import { AdminSide } from './views/AdminSide';
+import {Aboutus} from "./views/Aboutus"
+import ProductDetails from './components/ProductDetails';
+import NewsDetails from './components/NewsDetails';
+
+
+
 
 function App() {
   const classes = useStyles();
@@ -21,6 +26,7 @@ function App() {
     <>    
     
     <div className="App">  
+      <Navbar/>
 
  
       <Router>
@@ -37,7 +43,7 @@ function App() {
       </Router>
     
   </div>
-   </>
+  </>
 
   );
 }

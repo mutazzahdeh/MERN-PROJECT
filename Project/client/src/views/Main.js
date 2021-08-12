@@ -31,7 +31,11 @@ const Main = () => {
     }
 
     return (
+        
         <div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/script.js"></script>
+        <h1>hi</h1>
             <Form label1="name" label2="code" label3="price" label4="desc" label5="img" label6="category" formFun={formFun} error={errors} buttonValue="Add"></Form>
         </div>
     )

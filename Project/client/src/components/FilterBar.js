@@ -12,7 +12,7 @@ export const FilterBar = (props) => {
             setShowproduct(products)
         }
         else{
-         var pro=[]
+        var pro=[]
         pro=products.filter(product => product.category === catagory)
         setShowproduct(pro)}
      }
@@ -22,12 +22,12 @@ export const FilterBar = (props) => {
            
              <button  type="button" onClick={() => Filter("all product")}>All product</button>
             {
-           catagorys.map( (item, i) => 
-           <Button onclickHandler={() => Filter(item)}  text={item}/>
-           
+        catagorys.map( (item, i) => 
+        <Button onclickHandler={() => Filter(item)}  text={item}/>
+        
 
-         )}
-                  
+        )}
+        
         </div>
     )
 }
