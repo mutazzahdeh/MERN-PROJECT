@@ -26,7 +26,7 @@ function App() {
     <>    
     
     <div className="App">  
-      <Navbar/>
+      
 
  
       <Router>
@@ -35,6 +35,8 @@ function App() {
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show path='/kalb'/>
+        <ProductDetails path = "/product/:id"/>
+        <NewsDetails path = "/news/:id"/>
         </User>
         <AdminSide path="/admin">
         <Admin path='/login'></Admin>
