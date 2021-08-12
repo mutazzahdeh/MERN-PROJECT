@@ -17,7 +17,7 @@ const ProductDetails = (props)=> {
             <h1>{product.name}</h1>
             <p>Price: {product.price}</p>
             <p>Description: {product.desc}</p>
-            <p>image: {product.img}</p>
+            <img src={product.img} alt={product.img}/>
             <p>category: {product.category}</p>
             
             

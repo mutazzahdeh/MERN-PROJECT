@@ -27,7 +27,7 @@ const Navbar = (props) => {
     
     <div className={classes.header}>
         <div className = {classes.logo}>
-         <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
+    <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
         <h1>جمعية النهضة النسائية</h1>
         </div>
         <div className = {classes.small}>
@@ -46,7 +46,7 @@ const Navbar = (props) => {
                 </Link> 
             </Typography>)
             })}
-               
+
         </Toolbar>
         </Box>
     </div>
@@ -55,7 +55,7 @@ const Navbar = (props) => {
 
         
         
-   
+
 );
     }
 
