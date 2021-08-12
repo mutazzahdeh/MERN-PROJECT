@@ -20,12 +20,13 @@ import NewsScroll from './components/NewsScroll';
 
 function App() {
   const classes = useStyles();
+  const link={"/aboutus":"من نحن","/products":"منتجاتنا","/callus":" اتصل بنا"}
   return (
     <>    
     
     <div className="App">  
 
-      <Navbar/>
+      <Navbar LinkTo={link}/>
       <Router>
         <NewsMain path="/news" />
         <Main path="/show"></Main>
