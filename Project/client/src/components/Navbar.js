@@ -1,33 +1,26 @@
 import Avatar from '@material-ui/core/Avatar';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 //import AnimatedBg from "react-animated-bg";
+import Box from '@material-ui/core/Box';
+
 // import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from '@reach/router';
-
-
-
 import useStyles from './styles';
-const footerStyle = {
-  width: "100%",
-  height: "100px",
-  fontSize: "12px"
-}
+
+
+
+
+
 const Navbar = () => {
     const classes = useStyles();
 
     
     return (
-    <AnimatedBg 
-    colors={["#901414", "white"]}
-    duration={0.5}
-      delay={4} // it will wait 4 seconds before next transition starts
-    timingFunction="ease-in-out"
-    className="section-styles"
-    > 
+    
+    
     
 
    
@@ -35,17 +28,17 @@ const Navbar = () => {
     
     <div className={classes.header}>
         <div className = {classes.logo}>
-        <h1 dir="rtl">جمعية النهضة النسائية</h1>
+         <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
+        <h1>جمعية النهضة النسائية</h1>
+        </div>
         <div className = {classes.small}>
             Nahda Women Association 
             <br/>
             Non-profit organisation
         </div>
-        </div>
-        <p dir="rtl"> <Avatar dir="rtl" className = {classes.img}  alt="logo" src="../static/images/logo.png" /></p>
     </div>
-        
-        <Toolbar>
+        <Box boxShadow={10} >
+        <Toolbar className = {classes.customizeToolbar}>
                 {/* <Button color="inherit">ooll</Button> */}
                 
                 <Typography variant="h6" className={classes.title}>
@@ -66,13 +59,14 @@ const Navbar = () => {
                     </Link> 
                 </Typography>
         </Toolbar>
+        </Box>
     </div>
     
         
 
         
         
-     </AnimatedBg>
+   
 );
     }
 

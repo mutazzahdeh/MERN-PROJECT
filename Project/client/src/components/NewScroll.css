@@ -33,18 +33,18 @@ body {
         
         height: 500px;
         width: 250px;
-        border: 2px solid rgb(165, 0, 0);
+        border: 2px solid rgb(120, 0, 0);
         overflow: hidden;
         box-sizing: border-box;
-        position: absolute;
-        margin: 200px auto;
+        /* position: absolute;
+        margin: 200px auto; */
     }
     
     .marquee--inner {
         display: block;
         width: 200%;
         margin: 70px 0;
-        position: absolute;
+        /* position: absolute; */
         animation: marquee 10s linear infinite;
     }
     

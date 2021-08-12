@@ -11,7 +11,9 @@ const useStyles = makeStyles((theme) => ({
     },
     customizeToolbar: {
         // minHeight: 36,
-        backgroundColor: "silver",
+        backgroundColor: "#6d0909",
+        boxShadow : "solid black 10px"
+        
     },
 
     menuButton: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     Link:{
-        textDecoration:"none",color:"black",
+        textDecoration:"none",color:"white",
         marginRight: theme.spacing(2)
     },
 
@@ -37,19 +39,21 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         display:"flex",
-        alignItems:"streatch",
-        justifyContent : "flex-end",
-        flexDirection: "row",
+        alignItems:"center",
+        justifyContent : "space-between",
+        
         marginRight: "15px",
 
     
     },
 
     logo : {
+    display: "flex",
     fontSize : "20px",
     fontFamily: 'Apple Color Emoji',
     textAlign: "right",
-    margin: "5px"
+    margin: "5px",
+    color:"black"
     }, 
 
     small: {
@@ -62,8 +66,9 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         height: "100px",
         fontSize: "12px",
-        backgroundColor: "#901414",
+        backgroundColor: "#6d0909",
         padding: "10px",
+        color: "white"
         
     }
 }));
