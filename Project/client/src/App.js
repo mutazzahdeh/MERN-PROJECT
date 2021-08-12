@@ -1,4 +1,3 @@
-
 import './App.css';
 import {Router} from '@reach/router'
 import Main from './views/Main'
