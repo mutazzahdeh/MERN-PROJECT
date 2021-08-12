@@ -13,6 +13,7 @@ import NewsScroll from './components/NewsScroll';
 
 function App() {
   const classes = useStyles();
+
   return (
     <>    
     
