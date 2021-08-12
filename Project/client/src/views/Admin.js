@@ -1,18 +1,18 @@
 import React, {useState } from 'react';
-import Form from '../components/Form';
+import LoginForm from '../components/LoginForm';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 
-const Main = () => {
+const Admin = () => {
     
     const [errors, setErrors] = useState([])
-    const [task, setTask] = useState([])
+    const [tasks, setTasks] = useState([])
 
-    const formFun = (task) => {
-        axios.post("http://localhost:8000/api/product/new", task)
+    const formFunction = (tasks) => {
+        axios.post("http://localhost:8000/api/login", tasks)
         .then(res=>{
             console.log(res.data)
-            setTask(res.data);
+            setTasks(res.data);
             navigate("/show")
     
     
@@ -31,14 +31,10 @@ const Main = () => {
     }
 
     return (
-        
         <div>
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="/script.js"></script>
-        <h1>hi</h1>
-            <Form label1="name" label2="code" label3="price" label4="desc" label5="img" label6="category" formFun={formFun} error={errors} buttonValue="Add"></Form>
+            <LoginForm  label7="email" label8="password" formFunction={formFunction} error={errors} buttonValue="Add"></LoginForm>
         </div>
     )
 }
 
-export default Main
+export default Admin
