@@ -18,10 +18,9 @@ const NewsMain= () => {
     },[])
 
     return(
-        <div>
-
-            {loaded && <NewsScroll news={news} setNews={setNews} /> }
-        </div>
+        <>
+              {loaded && <NewsScroll news={news} setNews={setNews} /> }
+        </>
     )
 }
 export default NewsMain;
