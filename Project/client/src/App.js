@@ -10,6 +10,9 @@ import useStyles from './components/styles';
 import Admin from './views/Admin'
 import Show from './views/Show';
 import NewsScroll from './components/NewsScroll';
+import { AdminPage } from './views/AdminPage';
+import { User } from './views/User';
+import { AdminSide } from './views/AdminSide';
 
 function App() {
   const classes = useStyles();
@@ -19,15 +22,20 @@ function App() {
     
     <div className="App">  
 
-      <Navbar LinkTo={link}/>
+ 
       <Router>
+        <User path="/">
         <NewsMain path="/news" />
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show path='/kalb'/>
+        </User>
+        <AdminSide path="/admin">
         <Admin path='/login'></Admin>
+        <AdminPage path='/login/admin' ></AdminPage>
+        </AdminSide>
       </Router>
-      <Footer/>
+    
   </div>
    </>
 
