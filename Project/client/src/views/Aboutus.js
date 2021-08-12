@@ -2,6 +2,8 @@
 export const Aboutus = () => {
     return (
         <>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/script.js"></script>
         <div dir="rtl" style={{margin:"10px"}}>
             <h2 dir="rtl">جمعية النهضة النسائية </h2>
             <h3 dir="rtl">نشأة الجمعية :</h3>
