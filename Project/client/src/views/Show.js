@@ -21,7 +21,7 @@ function Show(props) {
             justifyContent: "space-between",
             flexWrap: "wrap",
             margin: "10px",
-            width: "1000px",
+            width: "1260px",
         },
         product1: {
 
@@ -38,6 +38,13 @@ function Show(props) {
             border: "black",
             border: "5px solid #555",
             
+        },
+        FilterBar:{
+            width:"180px",
+            height:"auto",
+            margin:"10px",
+
+
         }
     }
 
@@ -64,7 +71,7 @@ function Show(props) {
             <div id="main" >
                 <SearchComp products={product} setProducts={setProduct} showProduct={infos} setShowProd={setinfos} />
                 <div style={style.submain}>
-                    <div dir="rtl" >
+                    <div dir="rtl"  style={style.FilterBar}>
                         <FilterBar products={products} setProducts={setProducts} showProduct={infos} setShowproduct={setinfos} />
                     </div  >
                     <div style={style.product}>
@@ -74,7 +81,9 @@ function Show(props) {
                                     <img style={style.product1img} src={info.img} alt={info.name} />
                                     <p >
 
-                                        <Link to={"/product/" + info._id}> {info.name}, {info.price} , {info.category} </Link>
+                                        <Link to={"/product/" + info._id}> {info.name}</Link>
+                                        <p dir="rtl">السعر:{info.price}</p>
+                                        <p dir="rtl">الصنف:{info.category}</p>
 
                                     </p>
 
