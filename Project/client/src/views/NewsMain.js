@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import NewsScroll from '../components/NewsScroll';
+import LoginForm from '../components/LoginForm';
+
+
+
 
 const NewsMain= () => {
     const [news, setNews] = useState([]);
@@ -18,9 +22,15 @@ const NewsMain= () => {
     },[])
 
     return(
-        <>
-              {loaded && <NewsScroll news={news} setNews={setNews} /> }
-        </>
+        <div style={{display:"flex"}}>
+        {loaded && <NewsScroll news={news} setNews={setNews} /> }
+        <img src="../static/images/logo.png" alt='logo'/>
+        </div>
     )
 }
 export default NewsMain;
+
+
+
+
+
