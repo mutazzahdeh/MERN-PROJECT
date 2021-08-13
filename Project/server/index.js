@@ -3,14 +3,14 @@ const http = require("http"),
   app = express(),
   socketIo = require("socket.io");
 
-const server = http.Server(app).listen(8080);
+const server = http.Server(app).listen(8000);
 const io = socketIo(server);
 const clients = {};
 
-app.use(express.static(__dirname + "/../client/"));
-app.use(express.static(__dirname + "/../node_modules/"));
+app.use(express.static(__dirname + "../client/"));
+app.use(express.static(__dirname + "../node_modules/"));
 
-app.get("/", (req, res) => {
+app.get("/hi", (req, res) => {
   res.sendFile("index.html", { root: __dirname + "/../client/src/index.html" });
 });
 
