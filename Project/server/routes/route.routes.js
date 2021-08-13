@@ -23,4 +23,4 @@ module.exports = app => {
     app.get("/api/get/:id", Users.findUser);
     app.get("/api/logout", Users.logout);
     
-}
+} 

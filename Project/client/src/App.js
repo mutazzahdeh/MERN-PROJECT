@@ -1,7 +1,8 @@
 import './App.css';
 import { Router } from '@reach/router'
 import Main from './views/Main'
-
+import React, {useState, useEffect} from 'react'
+import io from 'socket.io-client';
 import NewsMain from './views/NewsMain';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
