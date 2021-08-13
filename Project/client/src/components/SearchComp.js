@@ -19,8 +19,8 @@ const SearchComp= (props)=> {
 return (
     <div style={{ width: 300 }} className="searchComp" >
     <p>
-    <label className="searchComp" >Name</label><br />
-    <input type="text" name="search" placeholder="Search.."
+   
+    <input dir="rtl" type="text" name="search" placeholder="البحث ..."
         onChange={(e) => { searchProd(e.target.value) }} />
 </p>
 
