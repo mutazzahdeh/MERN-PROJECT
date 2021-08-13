@@ -66,23 +66,23 @@ const NewsForm = props => {
     return (
         <div>
             <Paper elevation={3} style={styles.paper}>
-                <h2>News Form</h2>
+                <h2 dir="rtl">اضافة خبر</h2>
                 <form onSubmit={submitHandler}>
-                   
                     
                     <FormControl variant="outlined" style={styles.input}>
-                        <InputLabel>Password</InputLabel>
+                        <InputLabel ><p dir="rtl">عنوان الخبر</p></InputLabel>
                         <OutlinedInput type="Title" onChange={(e)=>{setTitle( e.target.value)}} />
                     </FormControl>
                     <FormControl variant="outlined" style={styles.input}>
-                        <InputLabel>desc</InputLabel>
+                    
                         <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="Description"  onChange={(e)=>{setDesc( e.target.value);console.log("#######")}}/>
                         
                        
                     </FormControl>
                     <br/>
-                 
+                    
                     <Button type="submit" variant="contained" color="primary" >
+
                         Register
                     </Button>
                 </form>
