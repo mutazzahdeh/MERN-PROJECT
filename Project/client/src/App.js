@@ -15,6 +15,9 @@ import { AdminSide } from './views/AdminSide';
 import {Aboutus} from "./views/Aboutus"
 import ProductDetails from './components/ProductDetails';
 import NewsDetails from './components/NewsDetails';
+import NewsForm from './components/NewsForm';
+import Tasahel from './components/Tasahel'
+
 
 
 
@@ -35,9 +38,11 @@ function App() {
         <NewsMain path="/news" />
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
-        <Show path='/kalb'/>
+        <Show path='/products'/>
         <ProductDetails path = "/product/:id"/>
         <NewsDetails path = "/news/:id"/>
+        <NewsForm path="/news/new"/>
+        <Tasahel path = "/tasahel"></Tasahel>
         </User>
         <AdminSide path="/admin">
         <Admin path='/login'></Admin>

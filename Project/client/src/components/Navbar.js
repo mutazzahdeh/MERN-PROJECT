@@ -36,6 +36,7 @@ const Navbar = (props) => {
             Non-profit organisation
         </div>
     </div>
+        <div class = "nav">
         <Box boxShadow={10} >
         <Toolbar className = {classes.customizeToolbar}>
                 {/* <Button color="inherit">ooll</Button> */}
@@ -49,6 +50,7 @@ const Navbar = (props) => {
                
         </Toolbar>
         </Box>
+        </div>
     </div>
     
         
