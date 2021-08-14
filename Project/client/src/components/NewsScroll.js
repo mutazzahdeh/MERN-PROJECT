@@ -28,7 +28,7 @@ const NewsScroll = (props) => {
         {news.map((news, idx)=>{return (
             <div className="orb">
                 <div className="bignews" key={idx}><Link className="news" to={"/news/" + news._id} > <b>News {formdate(news.createdAt)} </b></Link><br/> {news.title}</div><br />
-            
+                <div key={idx} className="bignews" >{news.desc}</div>
                 </div>
 
         )})}
