@@ -22,6 +22,7 @@ import Form from "./components/Form"
 import { navigate } from '@reach/router';
 import  Test from "./components/Test" 
 import AdminPrduct from './views/AdminPrduct';
+import { AdminNews } from './views/AdminNews';
 
 import Tasahel from './components/Tasahel';
 
@@ -45,9 +46,9 @@ function App() {
       .then(res=>{
           console.log(res.data)
           setTask(res.data);
-          navigate("/show")
-  
-  
+          setinfos([...infos,res.data]);
+          setProducts([...products,res.data])
+
   }) 
       .catch(err=>{
           console.log(err.response)
@@ -113,7 +114,10 @@ function App() {
         </User>
         <AdminSide path="/admin">
         <Admin path='/login'></Admin>
+        <AdminPrduct infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path="/products"  formFun={formFun} errors={errors} />
+        <AdminNews path="/news" news={news} setNews={setNews}/>
         </AdminSide>
+
         <Test path="test" ></Test>
       </Router>
     

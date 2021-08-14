@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core';
 
 const NewsForm = props => {
-   
+   const {newsa,setNews}=props
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
     const [errors,setErrors]=useState([])
@@ -26,10 +26,11 @@ const NewsForm = props => {
         },
         button: {
             width: "100%"
+            
         },
         TextArea:{
-            width:"215px",
-            height:"45px",
+            width:"680",
+            height:"150px",
             display:"block",
            padding:"5px",
            borderRadius: "5px"
@@ -43,51 +44,45 @@ const NewsForm = props => {
         console.log(news)
         axios.post("http://localhost:8000/api/news/new",news)
         .then(res=>{
-           
-           
-    
+           console.log(res.data)
+           var arr=[...newsa,res.data]
+           setNews(arr)
+          
     
     }) 
+}
     
     
-        .catch(err=>{
-            console.log(err.response)
-                const errorResponse = err.response.data.errors; // Get the errors from err.response.data
-                const errorArr = []; // Define a temp error array to push the messages in
-                for (const key of Object.keys(errorResponse)) { // Loop through all errors and get the messages
-                    errorArr.push(errorResponse[key].message)
-                }
-                // Set Errors
-                setErrors(errorArr);
-            })    
-        }  
 
 
     
     return (
         <div>
-            <Paper elevation={3} style={styles.paper}>
+            <div>
+          
                 <h2 dir="rtl">اضافة خبر</h2>
                 <form onSubmit={submitHandler}>
                     
                     <FormControl variant="outlined" style={styles.input}>
                         <InputLabel ><p dir="rtl">عنوان الخبر</p></InputLabel>
                         <OutlinedInput type="Title" onChange={(e)=>{setTitle( e.target.value)}} />
+                        <br/>
                     </FormControl>
+                    <br/>
                     <FormControl variant="outlined" style={styles.input}>
                     
-                        <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="Description"  onChange={(e)=>{setDesc( e.target.value);console.log("#######")}}/>
-                        
+                        <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="نص الخبر"  onChange={(e)=>{setDesc( e.target.value);console.log("#######")}}/>
+                        <br/>
                        
                     </FormControl>
                     <br/>
                     
-                    <Button type="submit" variant="contained" color="primary" >
+                    <Button style={{backgroundColor:"#6d0909"}}  type="submit" variant="contained" color="primary" >
 
-                        Register
+                        نشر الخبر
                     </Button>
                 </form>
-            </Paper>
+                </div>
         </div>
     )
 }
