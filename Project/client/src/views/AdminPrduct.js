@@ -1,6 +1,7 @@
 import FormComponent from "../components/Form"
 import { Link } from '@reach/router'
 import { Button, Card, TextField } from '@material-ui/core';
+import axios from 'axios';
 
 function AdminPrduct(props) {
     const {  formFun, errors,infos,products,product,setProduct,setProducts,setinfos }=props
@@ -24,7 +25,7 @@ function AdminPrduct(props) {
             height: "200px",
             width: "200px",
             marginLeft: "20px",
-            marginBottom: "100px",
+            marginBottom: "120px",
             marginTop: "10px"
             
         
@@ -42,10 +43,21 @@ function AdminPrduct(props) {
         FilterBar:{
             width:"180px",
             height:"auto",
-            margin:"10px",
+            margin:"20px",
 
 
         }
+    }
+    const deleteProduct=(id)=>{
+    console.log(id)
+    axios.delete('http://localhost:8000/api/product/' + id)
+    .then(res => {
+        setinfos(infos.filter(product => product._id !== id));
+        setProducts(products.filter(product => product._id !== id));
+       
+        console.log("done")
+    })
+
     }
 
 
@@ -62,13 +74,13 @@ function AdminPrduct(props) {
                                 
                                 <div style={style.product1} key={idx}>
                                     <img style={style.product1img} src={info.img} alt={info.name} />
-                                    <p >
+                                    
 
                                         <Link to={"/product/" + info._id}> {info.name}</Link>
                                         <p dir="rtl">السعر:{info.price}</p>
                                         <p dir="rtl">الصنف:{info.category}</p>
-                                        <Button  style={{backgroundColor:"#6d0909"}}  variant="contained" color="primary" type="submit" onclick={()=>{delete(info._id)}} >{"حذف المنتج"}</Button>
-                                    </p>
+                                        <Button  style={{backgroundColor:"#6d0909"}}  variant="contained" color="primary" type="submit" onClick={()=>{deleteProduct(info._id)}} >{"حذف المنتج"}</Button>
+                                    
 
                                 </div>)
                         })
