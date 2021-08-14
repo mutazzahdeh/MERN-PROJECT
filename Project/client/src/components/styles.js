@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
         // minHeight: 36,
         backgroundImage: "#fdd6bb",  
         boxShadow : "solid black 10px",
-        backgroundColor:"#6d0909"
+        backgroundColor:"#6d0909",
+        
     },
 
     menuButton: {
@@ -63,17 +64,31 @@ const useStyles = makeStyles((theme) => ({
 
     small: {
     fontSize: "20px",
-    fontFamily:  '-apple-system',
+    fontFamily:  'Cursive',
     
     },
 
     footer: {
+        display: "flex",
         width: "100%",
-        height: "100px",
+        height: "200px",
         fontSize: "12px",
         backgroundColor: "#6d0909",
         padding: "10px",
         color: "white",
+        justifyContent: "space-between",
+        alignItems: "center",
+        border: '2px solid rgba(0, 0, 0, 0.05)'
+    },
+    
+    AXSOS: {
+        display: "flex",
+        marginLeft: "20Px",
+        padding: "2px",
+        border: '12px solid rgba(0, 0, 0, 0.05)',
+        height: '100px',
+        width: "300px"
+        
     },
 
 //aboutUs Page
@@ -81,7 +96,9 @@ const useStyles = makeStyles((theme) => ({
         // backgroundImage:  `url(${})`,
         width: "100%",
         // height: "1600px",
-        backdropFilter: "contrast(0.95)"
+        backdropFilter: "contrast(0.95)",
+        fontSize: "15px",
+        fontFamily: "Cursive"
     },
     
     About: {
@@ -144,12 +161,13 @@ const useStyles = makeStyles((theme) => ({
 
 
     icon :{
-        width: "50px",
-        height: "50px",
+        width: "60px",
+        height: "60px",
         textAlign: "center",
         // marginR:"0px auto"
         marginTop:"10px"
-        }
+        },
+
 
 }));
 export default useStyles;
