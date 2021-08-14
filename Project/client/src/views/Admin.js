@@ -14,7 +14,7 @@ const Admin = () => {
         .then(res=>{
             console.log(res.data)
             setTasks(res.data);
-            navigate("/products")
+            navigate("/admin")
     
     
     }) 

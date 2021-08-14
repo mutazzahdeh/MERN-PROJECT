@@ -25,7 +25,9 @@ const NewsForm = props => {
             marginBottom: "1rem"
         },
         button: {
-            width: "100%"
+            width: "100%",
+            backgroundColor:"#6d0909",
+            color:'white'
         },
         TextArea:{
             width:"215px",
@@ -71,20 +73,20 @@ const NewsForm = props => {
                 <form onSubmit={submitHandler}>
                     
                     <FormControl variant="outlined" style={styles.input}>
-                        <InputLabel ><p dir="rtl">عنوان الخبر</p></InputLabel>
-                        <OutlinedInput type="Title" onChange={(e)=>{setTitle( e.target.value)}} />
+                    <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="عنوان الخبر"  onChange={(e)=>{setTitle( e.target.value);}}/>
+                        
                     </FormControl>
                     <FormControl variant="outlined" style={styles.input}>
                     
-                        <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="Description"  onChange={(e)=>{setDesc( e.target.value);console.log("#######")}}/>
+                        <TextareaAutosize style={styles.TextArea} aria-label="minimum height" minRows={3} placeholder="تفاصيل الخبر"  onChange={(e)=>{setDesc( e.target.value);}}/>
                         
                        
                     </FormControl>
                     <br/>
                     
-                    <Button type="submit" variant="contained" color="primary" >
+                    <Button type="submit" style={styles.button} variant="contained" >
 
-                        Register
+                        اضافة خبر
                     </Button>
                 </form>
             </Paper>
