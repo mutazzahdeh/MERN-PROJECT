@@ -17,6 +17,9 @@ import { Aboutus } from "./views/Aboutus"
 import ProductDetails from './components/ProductDetails';
 import NewsDetails from './components/NewsDetails';
 import NewsForm from './components/NewsForm';
+import Tasahel from './components/Tasahel';
+
+
 import axios from 'axios';
 import ScriptTag from 'react-script-tag';
 
@@ -48,36 +51,31 @@ useEffect(() => {
     },[])
 
   return (
-    <>
+    <>    
+    
+    <div className="App">  
+      
 
-      <div className="App">
-      <ScriptTag src="./socket.js" ></ScriptTag>
-
-
-        <Router>
-          <User path="/">
-            <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
-            <Main path="/show"></Main>
-            <Aboutus path='/aboutus'></Aboutus>
-            <Show path='/kalb' />
-            <ProductDetails path="/product/:id" />
-            <NewsDetails path="/news/:id" />
-            <NewsForm path="news/new"/>
-          </User>
-          <AdminSide path="/admin">
-            <Admin path='/login'></Admin>
-            
-              <NewsForm path="/news" news={news}/>
-              
-            
-            
-          </AdminSide>
-        </Router>
-
-      </div>
-      <ScriptTag src="./socket.js" />
-    </>
-
+  <ScriptTag src="./socket.js" ></ScriptTag>
+  <ScriptTag src="./socket.js" />
+      <Router>
+        <User path="/">
+        <NewsMain path="/news" />
+        <Main path="/show"></Main>
+        <Aboutus path='/aboutus'></Aboutus>
+        <Show path='/products'/>
+        <ProductDetails path = "/product/:id"/>
+        <NewsDetails path = "/news/:id"/>
+        <NewsForm path="/news/new"/>
+        <Tasahel path = "/tasahel"></Tasahel>
+        </User>
+        <AdminSide path="/admin">
+        <Admin path='/login'></Admin>
+        </AdminSide>
+      </Router>
+    
+  </div>
+  </>
   );
 }
 

@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     },
     customizeToolbar: {
         // minHeight: 36,
-        backgroundColor: "#6d0909",
+        backgroundImage: "#fdd6bb",  
         boxShadow : "solid black 10px"
         
     },
