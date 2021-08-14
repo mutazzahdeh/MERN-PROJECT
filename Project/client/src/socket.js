@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = ()=> {
   const io = require("socket.io");
   const url = window.location.origin;
   let socket = io.connect(url);
@@ -33,14 +33,14 @@ window.onload = function() {
         break;
 
       case "mousemove":
-        // if (now() - lastEmit > 50) {
+        
         socket.emit("mousemove", {
           x: e.pageX,
           y: e.pageY,
           drawing: drawing
         });
         lastEmit = now();
-        // }
+        
 
         if (drawing) {
           drawLine(prev.x, prev.y, e.pageX, e.pageY);
