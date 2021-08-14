@@ -1,11 +1,22 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import useStyles from '../components/styles';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
 import { shadows } from '@material-ui/system';
+import io from 'socket.io-client';
 
 export const Aboutus = () => {
     const classes = useStyles();
+    const [socket] = useState(() => io(':8000'));
+ 
+  useEffect(() => {
+   
+    console.log('Is this running?');
+
+    return () => socket.disconnect(true);
+    
+  }, []);
+  socket.on('Welcome', data => console.log(data));
 
 
 
@@ -13,8 +24,7 @@ export const Aboutus = () => {
     return (
         <div>
         <div >
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="/script.js"></script>
+    
         <div  className= {classes.container}>
             
             <header className= {classes.About}>

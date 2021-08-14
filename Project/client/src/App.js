@@ -32,6 +32,7 @@ import ScriptTag from 'react-script-tag';
 
 
 function App() {
+ 
 
   const [errors, setErrors] = useState([])
   const [task, setTask] = useState([])
@@ -63,14 +64,7 @@ function App() {
 
   <ScriptTag src="./socket.js" />
   const classes = useStyles();
-  const [socket] = useState(() => io(':8000'));
-useEffect(() => {
-  socket.on('Welcome', data => console.log(data));
-  
-  
-}, [socket])
-  const link = { "/aboutus": "من نحن", "/products": "منتجاتنا", "/callus": " اتصل بنا" }
-  socket.on('Welcome', data => console.log(data));
+
   const [news, setNews] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
@@ -100,37 +94,31 @@ useEffect(() => {
     <>
 
       <div className="App">
-
-
       <ScriptTag src="./socket.js" ></ScriptTag>
-  <ScriptTag src="./socket.js" />
-        <Router>
-          <User path="/">
-            <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
-            <Main path="/show"></Main>
-            <Aboutus path='/aboutus'></Aboutus>
-            <Show infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path='/kalb' />
-            <ProductDetails path="/product/:id" />
-            <NewsDetails path="/news/:id" />
-            <NewsForm path="news/new"/>
-            <Tasahel path = "/tasahel"></Tasahel>
-            
-          </User>
-          <AdminSide path="/admin">
-            <Admin path='/login'></Admin>
-            
-              <NewsForm path="/news" news={news}/>
-              <AdminPrduct infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path="/product" product formFun={formFun} errors={errors} />
-              <Test path="test" ></Test>
-            
-            
-          </AdminSide>
-        </Router>
+      <ScriptTag src="./socket.js" />
+      <Router>
+      <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
+        <User path="/">
+        <NewsMain path="/news" />
 
-      </div>
-    </>
-
-   
+        <NewsForm path="/news" news={news}/>
+        <Main path="/show"></Main>
+        <Aboutus path='/aboutus'></Aboutus>
+        <Show infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path='/kalb' />
+        <ProductDetails path = "/product/:id"/>
+        <AdminPrduct infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path="/products"  formFun={formFun} errors={errors} />
+        <NewsDetails path = "/news/:id"/>
+        <NewsForm path="/news/new"/>
+        <Tasahel path = "/"></Tasahel>
+        </User>
+        <AdminSide path="/admin">
+        <Admin path='/login'></Admin>
+        </AdminSide>
+        <Test path="test" ></Test>
+      </Router>
+    
+  </div>
+</>
   );
 }
 

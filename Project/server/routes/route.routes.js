@@ -16,7 +16,6 @@ module.exports = app => {
     app.put("/api/news/:id", NewsControllers.updateNews);
     app.delete("/api/news/:id", NewsControllers.deleteNews);
 
-
     app.post("/api/register", Users.register);
     app.post("/api/login", Users.login);
     app.get("/api/users",  Users.getAll);
