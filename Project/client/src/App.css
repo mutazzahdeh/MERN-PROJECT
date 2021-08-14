@@ -71,6 +71,14 @@
   height: 40vmin;
   pointer-events: none;
 }
+.outlined-basic{
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  height: 40px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

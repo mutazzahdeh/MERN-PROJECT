@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { FilterBar } from '../components/FilterBar'
+import FormComponent from "../components/Form"
 import { Link } from '@reach/router'
+import { Button, Card, TextField } from '@material-ui/core';
 
-import SearchComp from '../components/SearchComp'
-
-function Show(props) {
-  const {infos,products,product,setProduct,setProducts,setinfos} =props
+function AdminPrduct(props) {
+    const {  formFun, errors,infos,products,product,setProduct,setProducts,setinfos }=props
     const style = {
         main: {
 
@@ -20,6 +17,7 @@ function Show(props) {
             flexWrap: "wrap",
             margin: "10px",
             width: "1260px",
+            height:"auto"
         },
         product1: {
 
@@ -27,6 +25,10 @@ function Show(props) {
             width: "200px",
             marginLeft: "20px",
             marginBottom: "100px",
+            marginTop: "10px"
+            
+        
+           
 
         },
         product1img:{
@@ -47,23 +49,17 @@ function Show(props) {
     }
 
 
-
-
     
 
-
-
     return (
-        <>
-            <div id="main" >
-                <SearchComp products={product} setProducts={setProduct} showProduct={infos} setShowProd={setinfos} />
-                <div style={style.submain}>
-                    <div dir="rtl"  style={style.FilterBar}>
-                        <FilterBar products={products} setProducts={setProducts} showProduct={infos} setShowproduct={setinfos} />
-                    </div  >
-                    <div style={style.product}>
+        <div style={{display:"flex"}}>
+        <div style={{width:"1500px" }}>
+            <FormComponent path="/product"  label1="name" label2="code" label3="price" label4="desc" label5="img" label6="category" formFun={formFun} error={errors} />
+        </div>
+        <div style={style.product}>
                         {infos.map((info, idx) => {
                             return (
+                                
                                 <div style={style.product1} key={idx}>
                                     <img style={style.product1img} src={info.img} alt={info.name} />
                                     <p >
@@ -71,18 +67,16 @@ function Show(props) {
                                         <Link to={"/product/" + info._id}> {info.name}</Link>
                                         <p dir="rtl">السعر:{info.price}</p>
                                         <p dir="rtl">الصنف:{info.category}</p>
-                                        <a href="https://docs.google.com/forms/d/1Gu861Zb1WRpXamta5z97MAN7zIKrRUZqmtsUWD3Pygs/viewform?edit_requested=true">الشراء</a>
-
+                                        <Button  style={{backgroundColor:"#6d0909"}}  variant="contained" color="primary" type="submit" onclick={()=>{delete(info._id)}} >{"حذف المنتج"}</Button>
                                     </p>
 
                                 </div>)
                         })
                         }
                     </div>
-                </div>
-            </div>
-        </>
+        </div>
+
     )
 }
 
-export default Show
+export default AdminPrduct
