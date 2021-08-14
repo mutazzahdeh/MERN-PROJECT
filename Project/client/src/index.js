@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/script.js"></script>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

@@ -22,7 +22,14 @@ import NewsDetails from './components/NewsDetails';
 
 function App() {
   const classes = useStyles();
+  const [socket] = useState(() => io(':8000'));
+useEffect(() => {
+  socket.on('Welcome', data => console.log(data));
+  
+  
+}, [socket])
   const link = { "/aboutus": "من نحن", "/products": "منتجاتنا", "/callus": " اتصل بنا" }
+  socket.on('Welcome', data => console.log(data));
   return (
     <>
 
