@@ -41,17 +41,17 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
 
             <>
             <div class = "FormStyle">
-           
-       
+        
+    
             <Card style={{ width: "20rem", height: "20rem" , padding: "3rem" }} >
             
                 <form onSubmit={submitHandler}>
                 {error && error.map((err, index) => <p key={index}>{err}</p>) }
 
 
-               <TextField id="outlined-basic" label={label1} value={name} variant="outlined"  onChange={e => setName(e.target.value)}/>
+            <TextField id="outlined-basic" label={label1} value={name} variant="outlined"  onChange={e => setName(e.target.value)}/>
                {/* <p>{nerror}</p> */}
-               <TextField id="outlined-basic" label={label2}  value={code} variant="outlined"  onChange={e => setCode(e.target.value) }/>
+            <TextField id="outlined-basic" label={label2}  value={code} variant="outlined"  onChange={e => setCode(e.target.value) }/>
                 {/* <p>{perror}</p> */}
                 <TextField id="outlined-basic" label={label3}  value={price} variant="outlined"  onChange={e => setPrice(e.target.value) }/>
                 <TextField id="outlined-basic" label={label4}  value={desc} variant="outlined"  onChange={e => setDesc(e.target.value) }/>
@@ -70,8 +70,8 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
                         <option key={idx} value={cat}> {cat} </option>
                     ))}
                 </select>
-               <br></br>
-                  
+            <br></br>
+                
                     <Button variant="contained" color="primary" type="submit" >{buttonValue}</Button>
                 </form>
             </Card>
@@ -79,7 +79,7 @@ const FormComponent = ({label1, label2,label3,label4,label5,label6,formFun , err
             </div>
             
             </>
-       
+    
     )
 }
 
