@@ -153,8 +153,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         textAlign: "right",
         listStylePosition: "inside",
-        marginRight: "150px"
-        
+        marginRight: "150px",
+        paddingRight: "160px"
     },
     textarea:{
         width: "30%",
