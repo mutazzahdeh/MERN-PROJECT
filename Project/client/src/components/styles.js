@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
     small: {
     fontSize: "20px",
-    fontFamily:  '-apple-system',
+    fontFamily:  'inherit',
     
     },
 
