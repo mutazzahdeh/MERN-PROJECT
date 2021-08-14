@@ -21,19 +21,26 @@ body {
         opacity: .5;
         cursor: pointer;
     }
+    .news{
+        color: #6d0909;
+    }
+    .desc{
+        color: black;
+    }
     
     .red {background:red;}
     .yellow {background:yellow;}
-    .blue {background:blue;}
+    .blue {background:blue;}     
     .orange {background:orange;}
     .purple {background:purple;}
     .green {background:green;}
     
     .marquee {
         
-        height: 500px;
+        height:600px;
         width: 250px;
-        border: 2px solid rgb(120, 0, 0);
+        margin-left: 80px;
+        /* border: 2px solid rgb(120, 0, 0); */
         overflow: hidden;
         box-sizing: border-box;
         /* position: absolute;
@@ -69,4 +76,5 @@ body {
 
     .bignews{
         text-emphasis: 20px;
+        color: black;
     }

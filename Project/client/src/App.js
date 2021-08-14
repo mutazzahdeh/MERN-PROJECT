@@ -17,14 +17,25 @@ import { Aboutus } from "./views/Aboutus"
 import ProductDetails from './components/ProductDetails';
 import NewsDetails from './components/NewsDetails';
 import NewsForm from './components/NewsForm';
-import axios from 'axios';
+import Tasahel from './components/Tasahel';
 
+
+import axios from 'axios';
+import ScriptTag from 'react-script-tag';
 
 
 
 function App() {
+  <ScriptTag src="./socket.js" />
   const classes = useStyles();
+  const [socket] = useState(() => io(':8000'));
+useEffect(() => {
+  socket.on('Welcome', data => console.log(data));
+  
+  
+}, [socket])
   const link = { "/aboutus": "من نحن", "/products": "منتجاتنا", "/callus": " اتصل بنا" }
+  socket.on('Welcome', data => console.log(data));
   const [news, setNews] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
@@ -40,35 +51,31 @@ function App() {
     },[])
 
   return (
-    <>
+    <>    
+    
+    <div className="App">  
+      
 
-      <div className="App">
-
-
-
-        <Router>
-          <User path="/">
-            <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
-            <Main path="/show"></Main>
-            <Aboutus path='/aboutus'></Aboutus>
-            <Show path='/kalb' />
-            <ProductDetails path="/product/:id" />
-            <NewsDetails path="/news/:id" />
-            <NewsForm path="news/new"/>
-          </User>
-          <AdminSide path="/admin">
-            <Admin path='/login'></Admin>
-            
-              <NewsForm path="/news" news={news}/>
-              
-            
-            
-          </AdminSide>
-        </Router>
-
-      </div>
-    </>
-
+  <ScriptTag src="./socket.js" ></ScriptTag>
+  <ScriptTag src="./socket.js" />
+      <Router>
+        <User path="/">
+        <NewsMain path="/news" />
+        <Main path="/show"></Main>
+        <Aboutus path='/aboutus'></Aboutus>
+        <Show path='/products'/>
+        <ProductDetails path = "/product/:id"/>
+        <NewsDetails path = "/news/:id"/>
+        <NewsForm path="/news/new"/>
+        <Tasahel path = "/tasahel"></Tasahel>
+        </User>
+        <AdminSide path="/admin">
+        <Admin path='/login'></Admin>
+        </AdminSide>
+      </Router>
+    
+  </div>
+  </>
   );
 }
 

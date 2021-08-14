@@ -27,8 +27,8 @@ const NewsScroll = (props) => {
         <div className="marquee--inner">
         {news.map((news, idx)=>{return (
             <div className="orb">
-                <div className="bignews" key={idx}><Link to={"/news/" + news._id} > <b>News {formdate(news.createdAt)} </b></Link><br/> {news.title}</div><br />
-                <div key ={idx}>  {news.desc}</div>
+                <div className="bignews" key={idx}><Link className="news" to={"/news/" + news._id} > <b>News {formdate(news.createdAt)} </b></Link><br/> {news.title}</div><br />
+                <div className="desc" key ={idx}>  {news.desc}</div>
                 </div>
 
         )})}
