@@ -36,14 +36,17 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: '#6d0909',
   },
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
+    
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    backgroundColor:'#6d0909',
+    color:'white',
   },
 }));
 
@@ -70,21 +73,24 @@ const submitHandler = (e) => {
           {/* <LockOutlinedIcon /> */}
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          تسجيل الدخول
         </Typography>
-        <form className={classes.form} noValidate onSubmit={submitHandler}>
-          <TextField
-            onChange={e => setEmail(e.target.value)}
-            label = {label7}
+        <form className={classes.form} noValidate onSubmit={submitHandler} >
+          
+          <TextField 
+            onChange={e => setPassword(e.target.value)}
+            label ={label8}
             variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="الايميل"
+            
             name="email"
             autoComplete="email"
-            autoFocus
+            type="email"
+
           />
           <TextField
             onChange={e => setPassword(e.target.value)}
@@ -94,20 +100,20 @@ const submitHandler = (e) => {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="كلمة المرور"
             type="password"
             id="password"
             autoComplete="current-password"
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            label="تذكرني"
           />
           <Button
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            color="warning"
             className={classes.submit}
           >
             {buttonValue}

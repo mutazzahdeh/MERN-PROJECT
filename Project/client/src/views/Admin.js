@@ -40,7 +40,7 @@ const Admin = () => {
 
     return (
         <div>
-            <LoginForm  label7="email" label8="password" formFunction={formFunction} error={errors} buttonValue="Add"></LoginForm>
+            <LoginForm  label7="email" label8="password" formFunction={formFunction} error={errors} buttonValue="تسجيل الدخول"></LoginForm>
         </div>
     )
 }

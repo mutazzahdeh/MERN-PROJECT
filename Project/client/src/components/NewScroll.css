@@ -21,6 +21,12 @@ body {
         opacity: .5;
         cursor: pointer;
     }
+    .news{
+        color: #6d0909;
+    }
+    .desc{
+        color: black;
+    }
     
     .red {background:red;}
     .yellow {background:yellow;}
@@ -70,4 +76,5 @@ body {
 
     .bignews{
         text-emphasis: 20px;
+        color: black;
     }

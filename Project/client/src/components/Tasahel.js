@@ -35,7 +35,7 @@ const Article = () => {
             {loaded && <NewsScroll news={news} setNews={setNews} /> }
         </div> 
         </div>
-         <div style={{width:'60%' ,marginTop:"50px", marginLeft:"20%", fontSize:'16px', padding:'15px'}} className="back">
+         <div style={{width:'60%' ,marginTop:"10px", marginLeft:"20%", fontSize:'16px', padding:'15px'}} className="back">
  
             <header>
                 

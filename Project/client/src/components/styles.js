@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     customizeToolbar: {
         // minHeight: 36,
         backgroundImage: "#fdd6bb",  
-        boxShadow : "solid black 10px"
-        
+        boxShadow : "solid black 10px",
+        backgroundColor:"#6d0909"
     },
 
     menuButton: {
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         justifyContent : "space-between",
-        
+        marginLeft:"10px",
         marginRight: "15px",
 
     
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     }, 
 
     small: {
-    fontSize: "15px",
+    fontSize: "20px",
     fontFamily:  '-apple-system',
     
     },
