@@ -18,11 +18,12 @@ import ProductDetails from './components/ProductDetails';
 import NewsDetails from './components/NewsDetails';
 import NewsForm from './components/NewsForm';
 import axios from 'axios';
-
+import ScriptTag from 'react-script-tag';
 
 
 
 function App() {
+  <ScriptTag src="./socket.js" />
   const classes = useStyles();
   const [socket] = useState(() => io(':8000'));
 useEffect(() => {
@@ -50,7 +51,7 @@ useEffect(() => {
     <>
 
       <div className="App">
-
+      <ScriptTag src="./socket.js" ></ScriptTag>
 
 
         <Router>
@@ -74,6 +75,7 @@ useEffect(() => {
         </Router>
 
       </div>
+      <ScriptTag src="./socket.js" />
     </>
 
   );
