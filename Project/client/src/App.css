@@ -1,5 +1,5 @@
-.App {
-  /* text-align: center; */
+/* .App {
+   text-align: center; 
   background: white;
 }
 
@@ -39,6 +39,37 @@
   to {
     transform: rotate(360deg);
   }
+} */
+/* /////////////////////////// */
+ .marquee{
+  backdrop-filter: blur(6px);
+  border: none;
+  color :#7c5655;
+
+}
+
+.App {
+  text-align: center;
+}
+
+.back{
+  backdrop-filter: blur(20px);
+  width: 100px;
+  height: 500px;
+  mask-type: 100px;
+  color: #7c5655;
+  margin-right: 100px;
+}
+.Logo {
+  background-image: url(https://images-ext-2.discordapp.net/external/VY9aRa2uRrnWJJfWtLndbRyBwNBK5MngOE04k8UQRyc/%3Fsize%3D626%26ext%3Djpg/https/img.freepik.com/free-photo/people-happy-support-stacking-community_1150-1689.jpg?width=609&height=406);
+  background-size: 100%;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 .outlined-basic{
   width: 30%;
@@ -48,3 +79,48 @@
   resize: vertical;
   height: 40px;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.tasahel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.nav{
+
+  /* background-image:radial-gradient(#7c5655 , #b39797,#fcc099); */
+  background-color: #7c5655 ;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+
+
+
+

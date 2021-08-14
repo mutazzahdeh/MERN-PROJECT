@@ -23,8 +23,11 @@ import { navigate } from '@reach/router';
 import  Test from "./components/Test" 
 import AdminPrduct from './views/AdminPrduct';
 
+import Tasahel from './components/Tasahel';
 
 
+
+import ScriptTag from 'react-script-tag';
 
 
 
@@ -58,8 +61,16 @@ function App() {
               
   }
 
+  <ScriptTag src="./socket.js" />
   const classes = useStyles();
+  const [socket] = useState(() => io(':8000'));
+useEffect(() => {
+  socket.on('Welcome', data => console.log(data));
+  
+  
+}, [socket])
   const link = { "/aboutus": "من نحن", "/products": "منتجاتنا", "/callus": " اتصل بنا" }
+  socket.on('Welcome', data => console.log(data));
   const [news, setNews] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
@@ -91,7 +102,8 @@ function App() {
       <div className="App">
 
 
-
+      <ScriptTag src="./socket.js" ></ScriptTag>
+  <ScriptTag src="./socket.js" />
         <Router>
           <User path="/">
             <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
@@ -101,6 +113,7 @@ function App() {
             <ProductDetails path="/product/:id" />
             <NewsDetails path="/news/:id" />
             <NewsForm path="news/new"/>
+            <Tasahel path = "/tasahel"></Tasahel>
             
           </User>
           <AdminSide path="/admin">
@@ -117,6 +130,7 @@ function App() {
       </div>
     </>
 
+   
   );
 }
 

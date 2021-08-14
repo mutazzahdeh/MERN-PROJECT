@@ -27,8 +27,8 @@ const Navbar = (props) => {
     
     <div className={classes.header}>
         <div className = {classes.logo}>
-         <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
-        <h1>جمعية النهضة النسائية</h1>
+    <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
+        <h1 className = {classes.h}>جمعية النهضة النسائية</h1>
         </div>
         <div className = {classes.small}>
             Nahda Women Association 
@@ -36,6 +36,7 @@ const Navbar = (props) => {
             Non-profit organisation
         </div>
     </div>
+        <div class = "nav">
         <Box boxShadow={10} >
         <Toolbar className = {classes.customizeToolbar}>
                 {/* <Button color="inherit">ooll</Button> */}
@@ -46,16 +47,17 @@ const Navbar = (props) => {
                 </Link> 
             </Typography>)
             })}
-               
+
         </Toolbar>
         </Box>
+        </div>
     </div>
     
         
 
         
         
-   
+
 );
     }
 
