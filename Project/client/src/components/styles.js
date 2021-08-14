@@ -70,6 +70,21 @@ const useStyles = makeStyles((theme) => ({
         padding: "10px",
         color: "white"
         
+    },
+    textarea:{
+        width: "30%",
+        padding: "12px",
+        border: "1px solid #ccc",
+        borderRadius: "4px",
+        resize: "vertical",
+    },
+    butun:{
+        width: "30%",
+        padding: "12px",
+        border: "1px solid #ccc",
+        borderRadius: "4px",
+        resize: "vertical",
+        backgroundColor:"6d0909"
     }
 }));
 export default useStyles;

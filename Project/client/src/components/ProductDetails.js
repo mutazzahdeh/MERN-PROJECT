@@ -14,12 +14,17 @@ const ProductDetails = (props)=> {
 
     return (
         <div>
+            <div style={{display:"flex"}}>
+            <div>
+            <img style={{width:"100px",height:"100px"}} src={product.img} alt={product.img}/>
+            </div>
+            <div style={{margin:"10px"}}>
             <h1>{product.name}</h1>
-            <p>Price: {product.price}</p>
-            <p>Description: {product.desc}</p>
-            <p>image: {product.img}</p>
-            <p>category: {product.category}</p>
-            
+            <p>الصنف: {product.category}</p>
+            <p>السعر: {product.price}</p>
+            <p>الوصف: {product.desc}</p>
+            </div>
+            </div>
             
         </div>
         
