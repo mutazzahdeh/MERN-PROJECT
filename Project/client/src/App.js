@@ -100,12 +100,13 @@ function App() {
       <NewsMain news={news}loaded={loaded}setNews={setNews} path="/news" />
         <User path="/">
         <NewsMain path="/news" />
+
         <NewsForm path="/news" news={news}/>
         <Main path="/show"></Main>
         <Aboutus path='/aboutus'></Aboutus>
         <Show infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path='/kalb' />
         <ProductDetails path = "/product/:id"/>
-        <AdminPrduct infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path="/product" product formFun={formFun} errors={errors} />
+        <AdminPrduct infos={infos} products={products} product={product} setProduct={setProduct} setProducts={setProducts} setinfos={setinfos} path="/products"  formFun={formFun} errors={errors} />
         <NewsDetails path = "/news/:id"/>
         <NewsForm path="/news/new"/>
         <Tasahel path = "/"></Tasahel>
