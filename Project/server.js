@@ -1,19 +1,23 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const socket = require("socket.io");
 const app = express();
-require('./server/config/mongoose.config'); 
+const cors = require("cors");
+require('./server/config/mongoose.config')
 app.use(cors());
-app.use(express.json()); 
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 require('./server/routes/route.routes')(app);
-const server = app.listen(8000, () =>
-console.log('The server is all fired up on port 8000')
-);
-const io = require('socket.io')(server, { cors: true });
-io.on('connection',socket =>{
-        
-    socket.on("event_from_client",data =>{
-        console.log('yayyy')
-        socket.emit("Welcome",data)
-    })
-})
+
+const server = app.listen("8000", () => {
+  console.log("Server Running on Port 8000...");
+});
+
+io = socket(server);
+
+
+io.on("connection", socket =>{
+  
+    console.log("A new user has joined");
+    socket.emit("Welcome", "hiiii");
+    
+});

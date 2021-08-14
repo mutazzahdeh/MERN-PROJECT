@@ -8,6 +8,7 @@ export const AdminSide = (props) => {
         <div>
             <Navbar LinkTo={link}/>
             {children}
+            <p>Counter</p>
             <Footer/>
             
         </div>

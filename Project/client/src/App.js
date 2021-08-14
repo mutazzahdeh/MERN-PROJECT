@@ -21,21 +21,13 @@ import Tasahel from './components/Tasahel';
 
 
 import axios from 'axios';
-import ScriptTag from 'react-script-tag';
 
 
 
 function App() {
-  <ScriptTag src="./socket.js" />
+ 
   const classes = useStyles();
-  const [socket] = useState(() => io(':8000'));
-useEffect(() => {
-  socket.on('Welcome', data => console.log(data));
-  
-  
-}, [socket])
-  const link = { "/aboutus": "من نحن", "/products": "منتجاتنا", "/callus": " اتصل بنا" }
-  socket.on('Welcome', data => console.log(data));
+
   const [news, setNews] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
@@ -56,8 +48,6 @@ useEffect(() => {
     <div className="App">  
       
 
-  <ScriptTag src="./socket.js" ></ScriptTag>
-  <ScriptTag src="./socket.js" />
       <Router>
         <User path="/">
         <NewsMain path="/news" />
@@ -67,7 +57,7 @@ useEffect(() => {
         <ProductDetails path = "/product/:id"/>
         <NewsDetails path = "/news/:id"/>
         <NewsForm path="/news/new"/>
-        <Tasahel path = "/tasahel"></Tasahel>
+        <Tasahel path = "/"></Tasahel>
         </User>
         <AdminSide path="/admin">
         <Admin path='/login'></Admin>
