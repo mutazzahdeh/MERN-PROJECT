@@ -155,8 +155,24 @@ const useStyles = makeStyles((theme) => ({
         listStylePosition: "inside",
         marginRight: "150px"
         
-
     },
+    textarea:{
+        width: "30%",
+        padding: "12px",
+        border: "1px solid #ccc",
+        borderRadius: "4px",
+        resize: "vertical",
+    },
+    butun:{
+        width: "30%",
+        padding: "12px",
+        border: "1px solid #ccc",
+        borderRadius: "4px",
+        resize: "vertical",
+        backgroundColor:"6d0909"
+    },
+
+    
 
 
 

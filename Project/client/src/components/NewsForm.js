@@ -16,6 +16,7 @@ const NewsForm = props => {
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
     const [errors,setErrors]=useState([])
+    
     const styles = {
         paper: {
             width: "20rem", padding: "1rem"

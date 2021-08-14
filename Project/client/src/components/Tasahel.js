@@ -35,23 +35,27 @@ const Article = () => {
             {loaded && <NewsScroll news={news} setNews={setNews} /> }
         </div> 
         </div>
-         <div style={{width:'60%' ,marginTop:"10px", marginLeft:"20%", fontSize:'16px', padding:'15px'}} className="back">
+         <div style={{width:'70%' ,marginTop:"10px", marginLeft:"15%",marginRight:"5%" , fontSize:'16px', padding:'15px'}} className="back">
  
             <header>
                 
-          <h1 style={{fontFamily:"Fantasy", color:'#7c5655'}}>جمعية النهضة النسائية</h1>
+          <h1 style={{fontFamily:"Fantasy", color:'#6d0909',textDecoration:"underline"}}>جمعية النهضة النسائية</h1>
           </header>
           <br/>
-          <div style={{fontFamily:"Comic Sans MS, Comic Sans, cursive"}}>
+          <div style={{fontFamily:"Comic Sans MS, Comic Sans, cursive", color:'#722424'}}>
           <p>تأسست الجمعية في اول كانون الثاني سنة 1925 بمبادرة من سيدات مدينة رام الله وعلى رأسهم السيدة بديعة سلامة وذلك لخدمة النساء والأطفال في منطقة رام الله</p>
           
-          <ol>
-              <li>Acknowledge the fact that your first attempts to communicate will feel awkward and uncomfortable. This will pass as your interaction progresses.</li>
-              <br/>
-              <li>It’s OK to use paper and pen. In fact, the Deaf person will appreciate your efforts even more if you use a combination of communication methods, such as hand gestures, facial expressions and the written word.</li>
-              <br/>
-              <li>Take the time to communicate and connect. Deaf people consider communication an investment of time and effort. Slow down, take your time..</li>
-          </ol>
+          <h4>التطلعات المستقبلية تسعى الجمعية من خلال تطوير وتوسيع أنشطتها وبرامجها إلى :</h4>
+            <ul dir="rtl" style={{textAlign:"centre"}}>
+                <li dir="rtl">بناء مشاغل القسم المهني والإنتاجي لزيادة القدرة الاستيعابية من ذوي الإحتياجات الخاصة البالغين . </li>
+                <li dir="rtl">تطوير برنامج التقييم والتشخيص المهني للبالغين . </li>
+                <li dir="rtl">قسم خاص للمعوقين من ذوي الإعاقة الشديدة . </li>
+                <li>انشاء مختبر حاسوب لغوي لتطوير برامج التربية الخاصة .</li>
+
+                </ul>
+            <h4>مصادر تمويل الجمعية </h4>
+            <p>الجمعية كمؤسسة أهلية على التبرعات المحلية والخارجية لتدعيم وتطوير أنشطتها وخدماتها الإجتماعية والإنسانية والتربوية في المجتمع المحلي </p>
+            <p>برنامج العمل في المدارس : بدأ العمل في هذا البرنامج عام 1991 في المدارس النظامية الحكومية ليقدم خدماته للأطفال المعاقين عقلية والذين يعانون من صعوبات تعليمية في المرحلة الإبتدائية الأساسية ، يتم إجراء تقييم أكاديمي للطالب لتحديد المشكلة ، ومن ثم يتم تحديد الخطة الفردية بمشاركة الأهل ومعلم الصف والمرشد التربوي وذوي الاختصاص . البرنامج يقدم خدماته في المدارس الحكومية في مدينة رام الله بالتعاون والتنسيق مع برنامج العام الجامع / قسم التربية الخاصة في وزارة التربية والتعليم العالي . </p>
           </div>
             
         </div>  

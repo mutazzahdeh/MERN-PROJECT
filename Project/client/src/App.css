@@ -53,13 +53,12 @@
 }
 
 .back{
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(20px);
   width: 100px;
   height: 500px;
   mask-type: 100px;
   color: #7c5655;
   margin-right: 100px;
-  
 }
 .Logo {
   background-image: url(https://images-ext-2.discordapp.net/external/VY9aRa2uRrnWJJfWtLndbRyBwNBK5MngOE04k8UQRyc/%3Fsize%3D626%26ext%3Djpg/https/img.freepik.com/free-photo/people-happy-support-stacking-community_1150-1689.jpg?width=609&height=406);
@@ -71,6 +70,14 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.outlined-basic{
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  height: 40px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
