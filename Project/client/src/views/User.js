@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 
 export const User = (props) => {
     const {children}=props
-    const link={"/aboutus":"من نحن","/products":"منتجاتنا","/callus":" اتصل بنا"}
+    const link={"/aboutus":"من نحن","/products":"منتجاتنا","/":" الاخبار"}
 
     return (
         <div>
