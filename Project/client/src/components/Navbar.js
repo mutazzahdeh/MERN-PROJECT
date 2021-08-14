@@ -28,7 +28,7 @@ const Navbar = (props) => {
     <div className={classes.header}>
         <div className = {classes.logo}>
     <Avatar  className = {classes.img}  alt="logo" src="../static/images/logo.png" />
-        <h1>جمعية النهضة النسائية</h1>
+        <h1 className = {classes.h}>جمعية النهضة النسائية</h1>
         </div>
         <div className = {classes.small}>
             Nahda Women Association 

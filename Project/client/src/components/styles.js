@@ -46,7 +46,9 @@ const useStyles = makeStyles((theme) => ({
 
     
     },
-
+    h :{
+        marginRight:"15px"
+    },
     logo : {
     display: "flex",
     fontSize : "20px",
@@ -58,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
     small: {
     fontSize: "15px",
-    fontFamily:  '-apple-system'
+    fontFamily:  '-apple-system',
     
     },
 
