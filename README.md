@@ -37,7 +37,7 @@ Main Functions
 
 
 ## 3️⃣ Main Page
-:white_circle: *Here in these pages we show the regestration form and the wholesaler page.*
+:white_circle: *Here in these page we will display the main page.*
 
 
 ![pic](https://media.discordapp.net/attachments/874226536839020607/876158828679409674/mernproject.PNG?width=880&height=406)
