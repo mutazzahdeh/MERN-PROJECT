@@ -1,25 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+
 import NewsScroll from '../components/NewsScroll';
 import LoginForm from '../components/LoginForm';
 
 
 
 
-const NewsMain= () => {
-    const [news, setNews] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+const NewsMain= (props) => {
+const{news,loaded,setNews }=props;
 
-    useEffect(() => {
-        axios.get('http://localhost:8000/api/news')
-            .then(  res=>{
-                setNews(res.data);
-
-                setLoaded(true);
-            });
-
-
-    },[])
 
     return(
         <div style={{display:"flex"}}>
